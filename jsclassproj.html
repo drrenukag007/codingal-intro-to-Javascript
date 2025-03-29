@@ -1,0 +1,69 @@
+<html>
+
+<head>
+
+<title> JS class </title>
+
+
+</head>
+
+
+
+<body>
+
+<h1> JS class </h1>
+
+<p id="spaghetti"> </p>
+<p id="penne"> </p>
+<p id="details"> </p>
+
+
+
+<script>
+
+class Pasta{
+constructor(shape){
+
+          this.shape=shape;
+        
+
+
+
+}
+
+
+eat(){
+
+
+    return  "pastas are of many shapes and sizes and are loved by most.";
+}
+
+
+}
+
+
+spaghetti=new Pasta("cylindrical");
+penne=new Pasta("pen");
+
+document.getElementById("spaghetti").innerHTML=
+" my name is samaviya and i like pastas especially spaghettis which are " + spaghetti.shape + " in shape.";
+
+
+document.getElementById("penne").innerHTML=
+" my name is atharv and i like pastas too especially pennes which are " + penne.shape + " shaped!";
+
+
+document.write("<br>")
+document.getElementById("details").innerHTML=spaghetti.eat();
+
+
+
+
+
+
+
+</script>
+
+</body>
+
+</html>

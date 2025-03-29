@@ -1,0 +1,43 @@
+<html>
+
+<head>
+
+<title> js arrays </title>
+</head>
+
+<body>
+
+<h1
+style="text-align: center; margin: auto; border: 1px solid;
+width: 300px;"> js arrays </h1>
+
+<p id="demo" style="font-size: x-large;"> </p>
+
+<p id="demo2" style="font-size: x-large;"> </p>
+
+<p id="joining" style="font-size: x-large;"> </p>
+<p id="mylist" style="font-size: x-large;"> </p>
+<p id="mylist2" style="font-size: x-large;"> </p>
+<script>
+
+
+var subjects = ["math", "english", "urdu", "physics", "chemistry"];
+
+document.getElementById("demo").innerHTML= subjects[4];
+
+
+document.getElementById("demo2").innerHTML= Math.round(8.8);
+
+document.getElementById("joining").innerHTML= subjects.join("*");
+
+
+document.getElementById("mylist").innerHTML= subjects;
+
+subjects.pop();
+
+
+document.getElementById("mylist2").innerHTML= subjects;
+</script>
+
+</body>
+</html>

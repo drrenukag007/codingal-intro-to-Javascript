@@ -1,0 +1,70 @@
+<html>
+
+<head>
+
+<title> JS class </title>
+
+
+</head>
+
+
+
+<body>
+
+<h1> JS class </h1>
+
+<p id="student1"> </p>
+<p id="student2"> </p>
+<p id="details"> </p>
+<p id="name"> </p>
+<p id="year"> </p>
+
+<script>
+
+class student{
+constructor(name,year,age){
+
+          this.name=name;
+          this.year=year;
+          this.age=age;
+
+
+
+}
+
+
+study(){
+
+
+    return  "we are studying coding!";
+}
+
+}
+
+
+student1=new student("samaviya",2025,17);
+student2=new student("atharv",2025,15);
+
+document.getElementById("student1").innerHTML=
+"my name is " +student1.name + " and i am a student in the year " + student1.year + " of " 
++ student1.age + " age ";
+
+
+
+document.getElementById("student2").innerHTML=
+"my name is " +student2.name + " and i am a student in the year " + student2.year + " of " 
++ student2.age + " age ";
+
+document.getElementById("name").innerHTML=student1.name + "<br>" + student2.name;
+
+
+document.getElementById("year").innerHTML=student1.year + "<br>" + student2.year;
+
+document.getElementById("details").innerHTML=student1.study();
+
+
+</script>
+
+</body>
+
+</html>
