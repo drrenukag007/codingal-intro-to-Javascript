@@ -1,0 +1,159 @@
+<html>
+
+<head>
+
+<title> Bank App </title>
+
+<style>
+
+body{
+
+    background-color: rgb(255, 255, 255);
+}
+
+
+
+button{
+
+    background-color: rgb(12, 20, 68);
+    color: white;
+    padding: 10px 30px 10px 30px;
+    font-size: larger;
+    margin: 10px;
+}
+
+fieldset{
+
+    margin-top: 10%;
+    width: 400px;
+    background-color: rgb(255, 253, 160);
+}
+</style>
+
+</head>
+
+
+<body>
+
+<header style="background-image: url(bank\ 4.jpg);
+width: 1900px; height: 300px;">
+</header>
+
+
+<center> 
+<fieldset>
+<div class="container">
+
+<div class="row">
+
+
+    <h1 style="text-align: center;"> 
+
+        <img src="bank 2.jpg" height="250px" width="400px"
+        
+        
+        </h1>
+
+<div class="row">
+
+
+    <label> transaction: </label>
+    <input type="number" id="transaction">
+
+   
+
+</div>
+
+<br> <br>
+<div class="row">
+
+
+<button id="credit" class="btn"> credit </button>
+<button id="deposit" class="btn"> debit </button>
+
+</div>
+
+
+
+<div class="row">
+
+<label style="color: red;"> your balance: </la
+<label id="balance"> 0 </label>
+</div>
+
+
+<div class="row">
+
+<p id="message"> </p>
+</div>
+</div>
+</div>
+
+</fieldset>
+</center>
+
+<script>
+
+  var dp = document.getElementById("credit");
+  var wd = document.getElementById("deposit");
+
+
+  dp.addEventListener('click', function(){
+    
+    var yourbalance = document.getElementById('balance');
+    var youramount = document.getElementById('transaction').value;
+    
+
+    var yourmessage = document.getElementById('message');
+
+    var accountbalance = parseInt('yourbalance.innerText') + parseInt(youramount);
+     if(!youramount){
+     yourmessage.innerText="please enter your amount";
+
+     }
+
+    if(parseInt(youramount) >0 ){
+
+        yourbalance.innerText = parseInt(accountbalance);
+        yourmessage.innerText="";
+    }
+
+    else {
+    yourmessage.innerText= "please enter amount greater than 0";
+  
+  }
+  });
+
+
+
+
+
+  wd.addEventListener('click', function(){
+    
+    var yourbalance = document.getElementById('balance');
+    var youramount = document.getElementById('transaction').value;
+    
+
+    var yourmessage = document.getElementById('message');
+
+    var accountbalance = parseInt('yourbalance.innerText') + parseInt(youramount);
+     if(!youramount){
+     yourmessage.innerText="please enter your amount";
+
+     }
+
+    else if (parseInt(youramount) > parseInt(yourbalance)){
+      
+        yourmessage.innertext = "you dont have enough balance, please enter lesser amount";
+  
+    } 
+  });
+
+
+
+</script>
+
+</body>
+
+
+</html>
