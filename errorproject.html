@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> error handling </title>
+
+
+</head>
+<body>
+    
+
+<h1> error handling </h1>
+
+<script>
+
+
+try {
+
+alert('Start of try runs');  // (1) <--
+
+lalala; // error, variable is not defined!
+
+alert('End of try (never reached)');  // (2)
+
+} catch (err) {
+
+alert(`Error has occurred!`); // (3) <--
+
+}
+
+
+</script>
+</body>
+</html>

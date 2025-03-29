@@ -1,0 +1,64 @@
+<html>
+
+<head>
+
+<title>  sort array </title>
+
+
+</head>
+
+<body>
+
+
+<h3> click on the button to arrange the data </h3>
+
+<button onclick="ascending()"> ascending order </button>
+
+
+<p id="result1"> </p>
+
+<button onclick="descending()"> descending order </button>
+
+<p id="result2"> </p>
+
+
+<script>
+
+
+
+var numbers = [65, 44, 12, 4];
+const newArr = numbers.map(myFunction)
+
+function myFunction(num) {
+  return num * 10;
+
+}
+
+document.getElementById("result1").innerHTML= numbers;
+
+
+document.getElementById("result2").innerHTML = numbers;
+
+function ascending(){
+
+    numbers.sort(function(a,b) {return a-b});
+    
+document.getElementById("result1").innerHTML = newArr;
+
+
+}
+
+
+function descending(){
+
+numbers.sort(function(a,b) {return b-a});
+
+document.getElementById("result2").innerHTML = newArr;
+
+
+}
+
+</script>
+
+</body>
+</html>

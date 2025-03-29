@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> validation 2 </title>
+
+    <script>
+
+
+function myfunction(){
+
+var a = document.getElementById("id1");
+
+if (!a.checkValidity()){
+document.getElementById("result").innerHTML = a.validationMessage;
+
+
+}
+
+
+else {
+
+  document.getElementById("result").innerHTML = "Input is ok";
+
+
+}
+}
+
+    </script>
+
+
+</head>
+
+
+<body>
+    
+    <p> enter your age to check eligibility for driving a vehicle and click on OK </p>
+     
+    <input id="id1" type="number" min="18" max="60"required>
+
+
+<button onclick="myfunction()">  OK </button>
+
+<p> if the number is less that 18 or more than 60, error message will be displayed. </p>
+
+<p id="result"> </p>
+
+
+
+
+</body>
+</html>

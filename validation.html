@@ -1,0 +1,57 @@
+<html>
+
+
+<head>
+
+
+<title> js validation </title>
+
+
+
+<script> 
+
+
+function validate_form(){
+
+
+var x = document.forms["myform"]["fname"].value;
+
+if (x==""){
+
+
+
+    alert("Name should not be blank");
+    return false;
+}
+
+
+   else document.write("Name submitted");
+}
+
+
+</script>
+
+
+</head>
+
+<body>
+
+<form name="myform" onsubmit="validate_form()"> 
+
+
+Name <input type = "text" name= "fname">
+
+
+<br> <br> 
+
+
+<input type ="submit" value="Submit">
+
+
+
+</form>
+
+
+
+</body>
+</html>
